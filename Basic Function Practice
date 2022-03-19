@@ -1,0 +1,29 @@
+def bark():
+  print("Woof Woof!")
+  print("I'm a dog")
+
+for x in range(100):
+  ##bark()
+
+def hello():
+  print("Hello Nick!")
+
+hello()
+
+def hello(name):
+  print(f"Hello {name}!")
+
+hello("Rey")
+hello("Penny")
+hello("Cindy")
+
+def add_numbers(num_1,num_2):
+  print(num_1 + num_2)
+
+add_numbers(4,8)
+
+def dog_info(age,name):
+  print(f"I am a dog. My name is {name} and I'm {age} years old.")
+
+dog_info(2,"Ruby")
+
