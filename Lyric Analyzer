@@ -1,0 +1,37 @@
+##triple quotes allow you to have more than one line """x"""
+text_2 = """Dancing in the dark Middle of the night Taking your heart 
+And holding it tight Emotional touch Touching my skin And askin' you to do 
+What you've been doing All over again Oh it's a beautiful thing 
+Don't think I can keep it all in I just gotta let you know What it is that won't let me go Its your love 
+It just does something to me It sends a shock right through me I can't get enough And if you wonder 
+About the spell I'm under Oh its your love Better than I was More than I am 
+And all of this happened By taking your hand And who I am now Is who I wanted to be 
+And now that we're together I'm stronger than ever, I'm happy and free"""
+
+##text.split() splits the long string on spaces in between the string
+##len(text.split()) counts the number of words
+##len(text) counts the number of letters in the string
+##print(len(its_your_love.split()))
+
+text = """a b c a A b"""
+##print(text.split())
+
+word_count = {}
+
+for word in text.lower().split():
+  if word in word_count:
+    word_count[word] += 1
+  else:
+    word_count[word] = 1
+
+
+print(word_count)
+
+word_count2 = {}
+for w in text_2.lower().split():
+  if w in word_count2:
+    word_count2[w] += 1
+  else:
+    word_count2[w] = 1
+
+print(word_count2)
