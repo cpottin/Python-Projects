@@ -1,0 +1,26 @@
+class Solution:
+  #pass courses and prerequs return boolean
+  def canFinish(self, numCourses: int, prereqs: List[List[int]]) -> bool:
+#create map of courses and their prereqs, iterate of the courses adding their prereqs
+    preMap = {i:[] for i in range(numCourses)}
+    for crs, pre in prereqs:
+      preMap[crs].append(pre)
+
+#visitSet = all courses along the curr DFS path
+      visistSet = set()
+      def dfs(crs):
+        #allows us to return false if the course has been visited twice
+        if crs in visitSet:
+          return False
+        if preMap[crs] == []:
+          return True
+
+        visitSet.add(crs)
+        for pre in preMap[crs]:
+          if not dfs(pre): return False
+        visitSet.remove(crs)
+        preMap[crs] = []
+        return True
+      for crs in range(numCourse):
+        if not dfs(crs): return False
+      return True
